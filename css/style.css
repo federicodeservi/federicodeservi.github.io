@@ -43,7 +43,9 @@
 		border-bottom: dotted 1px;
 		color: #49bf9d;
 		text-decoration: none;
+		border-bottom-color: transparent;
 	}
+
 
 		a:hover {
 			border-bottom-color: transparent;
@@ -999,6 +1001,8 @@
 			margin: 0 0 1em 0;
 			width: 6.25em;
 		}
+
+		
 
 /* Footer */
 
