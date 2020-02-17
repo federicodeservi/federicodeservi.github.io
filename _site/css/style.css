@@ -40,10 +40,9 @@
 		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		border-bottom: solid 0.5px;
 		color: #49bf9d;
 		text-decoration: none;
-		border-bottom-color: transparent;
 	}
 
 
@@ -998,8 +997,8 @@
 		}
 
 		#header .image.avatar {
-			margin: 0 0 1em 0;
-			width: 6.25em;
+			margin: 0 0 2.5em 0;
+			width: 7em;
 		}
 
 		
