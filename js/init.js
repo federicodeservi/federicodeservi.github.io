@@ -4,6 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
 (function($) {
 
 	var settings = {
@@ -28,6 +30,7 @@
 			xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css' }
 		}
 	});
+
 
 	$(function() {
 
@@ -121,5 +124,5 @@
 				});
 
 	});
-
+	
 })(jQuery);
