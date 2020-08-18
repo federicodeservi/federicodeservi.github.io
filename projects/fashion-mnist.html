@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
+        <link href="../css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/theme-serpent.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+
+    </head>
+    <section class="bg--dark">
+    <body data-smooth-scroll-offset="77">
+        <div class="nav-container">
+            <div class="via-1593100097550" via="via-1593100097550" vio="About me">
+                <div class="bar bar--xs visible-xs bg--dark">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 col-md-2">
+                                <a href="../index.html"> <img class="logo logo-dark" alt="logo" src="../cap.png"> <img class="logo logo-light" alt="logo" src="../cap.png"> </a>
+                            </div>
+                            <div class="col-9 col-md-10 text-right">
+                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon stack-interface stack-menu"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav id="menu1" class="bar bar-1 hidden-xs bg--dark">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-2 hidden-xs">
+                                <div class="bar__module">
+                                    <a href="../index.html"> <img class="logo logo-dark" alt="logo" src="../cap.png"> <img class="logo logo-light" alt="logo" src="../cap.png"> </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                                <div class="bar__module">
+                                    <ul class="menu-horizontal text-left">
+                                        <li> <a href="../index.html">
+                                        HOME</a> </li>
+                                        <li> <a href="../projects.html">PROJECTS</a> </li>
+                                        <li> <a href="../about-me.html">
+                                        ABOUT ME</a> </li>
+                                        <li> <a href="../contact-me.html">
+                                        CONTACTS</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        </section>
+        <div class="main-container">
+            <section class="unpad--bottom switchable cta cta-3 bg--dark" style="padding-top:3em; padding-bottom:3em">
+                <div class="container">
+                    <div class="row">
+                        <div class="card card-1 boxed boxed--sm boxed--border hidden-sm hidden-md hidden-lg" style="padding-bottom:2em; margin-left:1em; width:70%">
+                            <div> <img alt="Image" class="block" src="../images/project images/fashionmnist/fashionmnist.jpg"> </div> 
+                        </div>
+                        <div class="col-md-6 col-lg-7">
+                            <div class="switchable__text" style="margin-top:1em">
+                                <h2><b>Fashion items recognition</b></h2>
+                                <p class="lead">In this project, we try to build a neural network and train it with the “Fashion MNIST Dataset”. 
+                                Fashion-MNIST is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. 
+                                We first use a simple NN model, then we train the same model using Data Augmentation techniques and using hyperparameters optimization.
+                                We then compare the accuracy of each model and make predictions.
+ </p>
+                                <a class="btn type--uppercase btn--primary" href="https://github.com/federicodeservi/fashion-mnist"> <span class="btn__text">
+                            View Code<br></span> </a>
+                            </div>
+                        </div>
+                        <div class="card card-1 boxed boxed--sm boxed--border hidden-xs" style="width:60%; margin-right:2em">
+                            <div> <img alt="Image" class="block" src="../images/project images/fashionmnist/fashionmnist.jpg"> </div> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="unpad">
+                <article>
+                    <div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-8" style="padding-top:3em">
+                                    <div class="article__body">
+                                         
+
+                                        <h2><b>The Fashion-mnist dataset</b></h2>
+                                        <p class="lead"> The <a href="https://github.com/zalandoresearch/fashion-mnist">Fashion-MNIST dataset</a> is a dataset provided by Zalando's research team, whose purpose is to replace the original MNIST dataset, a widely used dataset in the machine learning world, in order to benchmark ML algorithms.  </p>
+                                        <figure>
+                                            <img alt="Image" class="border--round box-shadow-small" src="https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/doc/img/fashion-mnist-sprite.png"> 
+                                            <figcaption>Source: https://github.com/zalandoresearch/fashion-mnist </figcaption>
+                                        </figure> 
+                                        <p class="lead">It is a great way to practice using different Neural Network techinques and to better understand how they compare to each other. </p>
+                                        <p><strong>NB!</strong> In this post I am not going to explain every single step and every single layer in the model, as I truly believe that there are better resources and better teachers out there in the web. If you want to deepen your knowledge about these topics please refer to the References paragraph at the end of the post, in which I will leave some of the best resources I have found on the internet.</p>
+
+                                        <h2><b>Importing the dataset and required libraries</b></h2>
+                                        <p class="lead"> For this project we are using <strong>Tensorflow</strong>. This allows us to import the dataset directly from Tensorflow's built-in datasets. We also import the required libraries for this project. (Some of them will be needed later, don't worry, I'll explain everything later on)</p>
+                                        <script src="https://gist.github.com/federicodeservi/69bc202eb79d845b0b195c23ce696e72.js"></script>
+
+                                        <h2><b>Data exploration and preprocessing</b></h2>
+                                        <p class="lead"> We then print the <strong>shape</strong> of the images. As you will see, every one of them is a <strong>28x28</strong> pixel images.
+                                        Before we do anything else, we need to <strong>prepare the images</strong> in order to be fed to the neural network for training. Being grayscale, the value of each pixel falls between 0 and 255. That is not what we want though. We need in fact to <strong>normalize</strong> the data, and we do so by dividing all images by 255, in order to make the pixel values fall between 0 and 1. </p>
+                                        <p> We then split the train and validation dataset, and reshape the data to a shape of 28,28,1 as it is the shape required by the neural network.</p>
+                                        <p>The last step is to <strong>one-hot encode the labels</strong>, in order to have for each image a number corresponding to the correct image category. </p>
+                                        <script src="https://gist.github.com/federicodeservi/c1a38ec55b33962ade07f553412d3b13.js"></script>
+                                    
+                                        <h2><b>Building the first model: a simple CNN</b></h2>
+                                        <p class="lead"> In this first model we build a simple <strong>convolutional neural network</strong> consisting of 10 layers. We then compile it using a categorical crossentropy loss function, as the problem is categorical, an Adam optimizer and using accuracy as a metric function. </p>
+                                        <p> We then make the choice to use two <strong>callbacks</strong> while training the model. The first one is a <strong>checkpointer</strong>, which is a callback that saves the model weights only if it observes an improvement in the validation loss. The second one is an <strong>Early Stopper</strong>, which stops the training if, after 20 epochs, no relevant improvement is observed.</p>
+                                        <script src="https://gist.github.com/federicodeservi/3082ad36cf55cb8cc64df0d55aadf76c.js"></script>
+                                        <p> We then load the best model and evaluate it on the test set, obtaining an <strong>accuracy of 92%</strong>. Let's see if we can improve it in some way.</p>
+
+                                        <h2><b>Building the second model: a simple CNN with hyperparameters optimization</b></h2>
+                                        <p class="lead"> This time, we use the same model as before, but we try to find the <strong>best possible hyperparameters</strong> (the parameters of model).</p>
+                                        <p class="lead">In order to choose the best hyperparameters for our model we used<strong> <a href="https://github.com/keras-team/keras-tuner">keras-tuner</a></strong>, a python library that let us choose the best performing parameters for our model using a random search. More about that <a href="https://github.com/keras-team/keras-tuner">here</a>.</p>
+                                        <script src="https://gist.github.com/federicodeservi/33686f7b836aa429b6064af9dc1bf65f.js"></script>
+                                        <p class="lead">After 30 different models with different hyperparameters combinations trained for 30 epochs (ideally we would have searched for more combinations but hyperparameters search is very time and energy consuming), we got the following <strong>accuracy: still 92%</strong>. This may be due to the fact that kerastuner would have needed more time and more possible combinations to explore.</p>
+
+
+                                        <h2><b>Building the third model: CNN trained using Data Augmentation</b></h2>
+                                        <p class="lead"> Last but not least, we try to using <strong>Data Augmentation techniques</strong> to improve the accuracy of the model. </p>
+                                        <p>As we know, having <strong>quality data</strong> to train the model with is always a plus. This means usually having large amount of data and having some type of variation in the data, but that is not always possible.
+To mitigate this problem, we can use Data Augmentation techniques, which <strong>apply modifications (like rotation, zooming, etc) to the images</strong>. To do so, we use the Tensorflow image preprocessing class that can do this in just a few lines of codes.</p>
+                                        <script src="https://gist.github.com/federicodeservi/0988019f843b6eadebcb26e1c713eaa6.js"></script>
+                                        <p> We then evaluate the model on the test set, obtaining an <strong>accuracy of 91,3%</strong>. Why is that lower than the first two models? Probably because, using data augmentation, the model would have needed more epochs to train effectively and to obtain a higher accuracy. We have not done that because, as hyperparameter optimization, this techiques are very time and power consuming. Also, the objective of this project was to pratice and gain confidence using this different deep learning techinques, not to develop the best possible model. </p>
+
+                                        <h2><b>Make predictions</b></h2>
+                                        <p class="lead"> We can now use the model to make a prediction on any of the pictures contained in the test dataset. </p>
+                                        <script src="https://gist.github.com/federicodeservi/10acee4e0cb9b51f101a99429b2c700e.js"></script>
+                                        <p class="lead"> Our last step is to finally plot different pictures with their predictions. Green text means that the model predicted correctly, while red indicates that it did not. </p>
+                                        <img alt="Image" class="border--round box-shadow-small" src="../images/project images/fashionmnist/prediction.png">
+
+                                        <h2 id="references"><b>References</b></h2> 
+                                        <p class="lead">[0]<a href="https://medium.com/swlh/exploring-fashion-mnist-with-tensorflow-and-keras-aa780b766149">Exploring Fashion-MNIST with TensorFlow and Keras</a>, Abdelhakim Ouafi, (2019) <br>
+                                            [1]<a href="https://towardsdatascience.com/classifying-fashion-apparel-getting-started-with-computer-vision-271aaf1baf0">Classifying fashion apparel</a>, Navendu Pottekkat, (2020) <br>
+                                        [2]<a href="https://medium.com/@lukaszlipinski/fashion-mnist-with-keras-in-5-minuts-20ab9eb7b905">Fashion MNIST with Keras in 5 minutes</a>, Lukasz Lipiński, (2017) <br></p>                                       
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            
+            <footer class="text-center space--sm footer-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            
+                            <div>
+                                <ul class="social-list list-inline list--hover">
+                                    <li><a href="#"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                                    <li><a href="#"><i class="socicon socicon-medium icon icon--xs"></i></a></li>
+                                    <li><a href="#"><i class="socicon socicon-github icon icon--xs"></i></a></li>
+                                    <li><a href="#"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                </ul>
+                            </div>
+                            <div> <a class="type--fine-print" href="../privacy-cookie-policy.html">Privacy Policy</a>  </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/parallax.js"></script>
+        <script src="../js/smooth-scroll.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics - Not active by default as GDPR requires -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
+        <script>
+            window.addEventListener('load', function(){
+            window.cookieconsent.initialise({
+            revokeBtn: "<div class='cc-revoke'></div>",
+            type: "opt-in",
+            position: "bottom-left",
+            theme: "classic",
+            palette: {
+                popup: {
+                    background: "#252525",
+                    text: "#fff"
+                    },
+                button: {
+                    background: "#ff6100",
+                    text: "#fff"
+                    }
+                },
+            content: {
+                link: "Сookie policy",
+                href: "../privacy-cookie-policy.html"
+                },
+                onInitialise: function(status) {
+                if(status == cookieconsent.status.allow) myScripts();
+                },
+                onStatusChange: function(status) {
+                if (this.hasConsented()) myScripts();
+                }
+            })
+            });
+
+            function myScripts() {
+
+
+            // Google Analytics
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-171285482-1', 'auto');
+                ga('set', 'allowAdFeatures', false);
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');
+
+                
+                
+                    
+
+            }
+        </script>
+
+    </body>
+
+</html>
