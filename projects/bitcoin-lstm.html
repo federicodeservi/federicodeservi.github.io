@@ -69,7 +69,7 @@
                         <div class="col-md-6 col-lg-7">
                             <div class="switchable__text" style="margin-top:1em">
                                 <h2><b>Predicting Bitcoin price using Neural Networks</b></h2>
-                                <p class="lead">Machine learning has been one of the hottest topics over these years. It has found applications in many interesting fields, such as analyzing and predicting time series data, even in financial markets. In this project we try to use a special kind of Recurrent Neural Network, called LSTM, to try to predict Bitcoin price data. </p>
+                                <p class="lead">Machine learning has been one of the hottest topics over these years. It has found applications in many interesting fields, such as analyzing and predicting time series data, even in financial markets. In this project, we try to use a special kind of Recurrent Neural Network, called LSTM, to try to predict Bitcoin price data. </p>
                                 <a class="btn type--uppercase btn--primary" href="https://github.com/federicodeservi/bitcoin-lstm-prediction"> <span class="btn__text">
                             View Code<br></span> </a>
                             </div>
@@ -88,22 +88,22 @@
                                 <div class="col-md-10 col-lg-8" style="padding-top:3em">
                                     <div class="article__body">
                                         
-                                        <p class="citation">This is a classic stock market prediction problem, and as such, we need to make clear that predicting price behaviour is a really difficult problem, as we will see later in this project.<br></p>
+                                        <p class="citation">This is a classic stock market prediction problem, and as such, we need to make clear that predicting price behavior is a really difficult problem, as we will see later in this project.<br></p>
                                         
                                         
                                         <p class="lead">All code used is available in this <a href="https://github.com/federicodeservi/bitcoin-lstm-prediction">Github repository</a></p>
                                         <p class="lead"><strong>NB!</strong> This content is for informational and research purposes only. It is not intended to be legal, tax, investment, financial, or other advice.</p>
                                         <h2 id="summary"><b>Summary</b></h2>
-                                        <p class="lead">First, I will briefly introduce <strong>Recurrent Neural Networks</strong> and LSTM. Then I will present the <strong>first model</strong> built for this project, a univariate LSTM that uses past bitcoin price data to make new predictions. The <strong>second model</strong> I will present is a multivariate model, that uses as inputs not only past bitcoin price data, but also other data, like S&amp;P500 price and others. We will then compare the <strong>results </strong>and see which model perform better.</p>
+                                        <p class="lead">First, I will briefly introduce <strong>Recurrent Neural Networks</strong> and LSTM. Then I will present the <strong>first model</strong> built for this project, a univariate LSTM that uses past bitcoin price data to make new predictions. The <strong>second model</strong> I will present is a multivariate model, that uses as inputs not only past bitcoin price data, but also other data, like S&amp;P500 price and others. We will then compare the <strong>results </strong>and see which model performs better.</p>
                                         <h2 id="recurrent-neural-networks"><b>Recurrent Neural Networks</b></h2>
                                         <p class="lead">As it is nicely explained in <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">this post</a>:</p>
                                         <p class="citation"><i>“Humans don’t start their thinking from scratch every second. As you read this essay, you understand each word based on your understanding of previous words. You don’t throw everything away and start thinking from scratch again. Your thoughts have persistence.
 Traditional neural networks can’t do this, and it seems like a major shortcoming. For example, imagine you want to classify what kind of event is happening at every point in a movie. It’s unclear how a traditional neural network could use its reasoning about previous events in the film to inform later ones.
 Recurrent neural networks address this issue. They are networks with loops in them, allowing information to persist.”</i></p>
-                                        <p class="lead">That's the reason why RNN, and in particular <strong>LSTM</strong>, are used in <strong>time series analysis</strong>. I will leave a couple of interesting posts in the references that explain briefly LSTM functioning in order for you to get a better understanding of the following work.</p>
+                                        <p class="lead">That's the reason why RNN, and in particular <strong>LSTM</strong>, are used in <strong>time series analysis</strong>. I will leave a couple of interesting posts in the references that explain briefly LSTM functioning for you to get a better understanding of the following work.</p>
                                         <h2 id="first-model-univariate"><b>First model: univariate</h2>
                                         <h3 id="data-used"><b>Data used</b></h3>
-                                        <p class="lead">We downloaded BTC-USD price data from Yahoo Finance, using yfinance python module, from 2014–01–01 to 2020–05–13. We selected the “Close price” column for our analysis, normalizing it using Scikit-Learn’s MinMaxScaler with numbers between zero and one. We then considered the fact that we wanted to predict 1 day ahead (look_back=1), having as input the 60 past observed days, and we finally splitted the data in train/validate and test sets.</p>
+                                        <p class="lead">We downloaded BTC-USD price data from Yahoo Finance, using yfinance python module, from 2014–01–01 to 2020–05–13. We selected the “Close price” column for our analysis, normalizing it using Scikit-Learn’s MinMaxScaler with numbers between zero and one. We then considered the fact that we wanted to predict 1 day ahead (look_back=1), having as input the 60 past observed days, and we finally split the data in train/validate and test sets.</p>
                                         <h3 id="the-model"><b>The model</b></h3>
                                         <p class="lead">The model built is a fairly simple one, being composed of just 5 layers:</p>
                                         <ol>
@@ -118,7 +118,7 @@ Recurrent neural networks address this issue. They are networks with loops in th
                                         <li><p>Dense output layer</p>
                                         </li>
                                         </ol>
-                                        <p class="lead">In order to choose the best hyperparameters for our model we used<strong> <a href="https://github.com/keras-team/keras-tuner">keras-tuner</a></strong>, a python library that let us choose the best performing parameters for our model using a random search. More about that <a href="https://github.com/keras-team/keras-tuner">here</a>.</p>
+                                        <p class="lead">In order to choose the best hyperparameters for our model, we used<strong> <a href="https://github.com/keras-team/keras-tuner">keras-tuner</a></strong>, a python library that let us choose the best performing parameters for our model using a random search. More about that <a href="https://github.com/keras-team/keras-tuner">here</a>.</p>
                                         <p class="lead">After 100 different hyperparameters combinations, we got the following <strong>best model</strong>:</p>
                                         
                                         <script src="https://gist.github.com/federicodeservi/76736d0f490368dc3b2633b93a445a2d.js"></script>
@@ -126,7 +126,7 @@ Recurrent neural networks address this issue. They are networks with loops in th
                                         <h3 id="results"><b>Results</b></h3>
                                         <p>The result obtained on the <strong>test set</strong> (new data that the model has never seen before) is the following:</p>
                                         <p><img src="../images/project images/bitcoin/btc1.png" alt=""></p>
-                                        <p>As we can see, it performed quite well for our own purposes, even though it only used past data to make new predictions. There is room for improvement however, and thatÔÇÖs why we thought of a second model for our goal.</p>
+                                        <p>As we can see, it performed quite well for our own purposes, even though it only used past data to make new predictions. There is room for improvement, however and thatÔÇÖs why we thought of a second model for our goal.</p>
                                         <h2 id="second-model-multivariate"><b>Second model: multivariate</h2>
                                         <p>We then thought of a second model, that used not only past bitcoin price data, but also other assets that might influence the BTC price, like:</p>
                                         <ol>
@@ -138,7 +138,7 @@ Recurrent neural networks address this issue. They are networks with loops in th
                                         </li>
                                         </ol>
                                         <h3 id="data-used"><b>Data used</b></h3>
-                                        <p>We downloaded all of our data from Yahoo Finance, as done before, from 2017–01–01 to 2020–05–13. That is because Bitcoin is still a new asset, and as such, has matured only in recent years, being more and more adopted worldwide. We then saw that the 3 newly added time series (SP500, DXY GOLD) had some <strong>missing values</strong> (especially on Sundays, as we expected) so we made the choice to fill those empty values with the nearest value available in the time serie. We then normalized it as done previously and fed it to our model.</p>
+                                        <p>We downloaded all of our data from Yahoo Finance, as done before, from 2017–01–01 to 2020–05–13. That is because Bitcoin is still a new asset, and as such, has matured only in recent years, being more and more adopted worldwide. We then saw that the 3 newly added time series (SP500, DXY GOLD) had some <strong>missing values</strong> (especially on Sundays, as we expected) so we chose to fill those empty values with the nearest value available in the time serie. We then normalized it as done previously and fed it to our model.</p>
                                         <h3 id="the-model"><b>The model</b></h3>
                                         <p>The model built is still composed of 5 layers. As done before, we used keras-tuner to get the best possible hyperparameter combination out of 60 different random ones. After that, we got the following <strong>best model</strong>:</p>
                                         
@@ -148,8 +148,8 @@ Recurrent neural networks address this issue. They are networks with loops in th
                                         <p>The result obtained on the <strong>test set</strong> is the following:</p>
                                         <p><img src="../images/project images/bitcoin/btc2.png" alt=""></p>
                                         <h2 id="conclusion"><b>Conclusion</b></h2>
-                                        <p>Both models performed quite well for our own research purposes, with little differences between the two, in favor to the <strong>multivariate </strong>model which seemed to produce more accurate predictions.</p>
-                                        <p>Even if we came up with quite <strong>good results</strong>, it is definitely <strong>not </strong>possible to predict bitcoin price behaviour by using only historical data. In fact, a small difference in the chart above may result in hundreds of dollars of difference, and as such, it is <strong>not usable</strong> in real life situations.</p>
+                                        <p>Both models performed quite well for our own research purposes, with little differences between the two, in favor of the <strong>multivariate </strong>model which seemed to produce more accurate predictions.</p>
+                                        <p>Even if we came up with quite <strong>good results</strong>, it is definitely <strong>not </strong>possible to predict bitcoin price behavior by using only historical data. In fact, a small difference in the chart above may result in hundreds of dollars of difference, and as such, it is <strong>not usable</strong> in real-life situations.</p>
                                         <h2 id="references"><b>References</b></h2> 
                                         <p class="lead">[0]<a href="https://medium.com/neuronio/predicting-stock-prices-with-lstm-349f5a0974d4">Predicting stock prices with lstm</a>, Alexandre Xavier, (2019) <br>
                                             [1]<a href="https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/">Multivariate Time Series Forecasting with LSTMs in Keras</a>, Jason Brownlee, (2017) <br>
