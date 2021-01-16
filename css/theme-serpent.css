@@ -103,7 +103,7 @@ p.citation {
 }
 h1,
 .h1 {
-  font-size: 3.14285714em;
+  font-size: 7vh;/*3.14285714em;*/
   line-height: 1.31818182em;
 }
 h2,
@@ -2784,8 +2784,24 @@ a {
 }
 .bg--primary {
   /*background: #5bc0be;*/
-  background: linear-gradient(121deg, rgba(255,97,0,1) 0%, rgba(140,54,221,1) 48%, rgba(121,9,96,1) 100%);
+  background: linear-gradient(121deg, rgba(255,97,0,1) 0%, rgba(140,54,221,1) 44%, rgba(121,9,96,1) 76%, rgba(198,36,0,1) 100%);
+
+  background-size: 200% 200%;
+  animation: gradient 20s ease infinite;
 }
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
 .bg--primary p,
 .bg--primary span,
 .bg--primary ul,
@@ -3455,8 +3471,8 @@ section.text-right > .container:last-child > .row:only-child > div[class*='col-'
 /**! 37. Spacing **/
 section,
 footer {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 0em;
+  padding-bottom: 1em;
 }
 section.space--xxs,
 footer.space--xxs {
@@ -4037,7 +4053,7 @@ h1,
 }
 h1:not(:last-child),
 .h1:not(:last-child) {
-  margin-bottom: 0.59090909090909em;
+  margin-bottom: 0em;
 }
 @media all and (min-width: 768px) {
   h1.h1--large,
@@ -4544,7 +4560,7 @@ p > .btn {
   border-color: #fff;
 }
 .bg--primary div:not([class*='feature']) .btn--primary .btn__text {
-  color: #5bc0be;
+  color: #202020;
 }
 .bg--primary > .btn--primary {
   background: #fff;
@@ -9383,3 +9399,98 @@ footer.footer-7 {
     margin-right: auto;
   }
 }
+
+
+
+/* extra */
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: none;
+  overflow: hidden;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  -webkit-animation: drop 7s 0s infinite;
+          animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line:nth-child(1) {
+  margin-left: 10%;
+}
+.line:nth-child(1)::after {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.line:nth-child(2) {
+  margin-left: 20%;
+}
+.line:nth-child(2)::after {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.line:nth-child(3) {
+  margin-left: 30%;
+}
+.line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.line:nth-child(4) {
+  margin-left: 40%;
+}
+.line:nth-child(4)::after {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.line:nth-child(5) {
+  margin-left: 50%;
+}
+.line:nth-child(5)::after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+
+
