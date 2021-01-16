@@ -4664,3 +4664,23 @@ a.text-dark:hover, a.text-dark:focus {
     padding-bottom:5em;
   }  
   } 
+
+.aboutme {
+  padding-top:0em; 
+}
+
+@media (min-width: 767px) {
+  .aboutme {
+    padding-top:5em; 
+  }  
+  } 
+
+.aboutme2 {
+  padding-top:2em; 
+}
+
+@media (min-width: 767px) {
+  .aboutme2 {
+    padding-top:5em; 
+  }  
+  } 

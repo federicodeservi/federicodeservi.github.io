@@ -152,7 +152,7 @@ h6,
     line-height: 1.85714286em;
   }
   .lead {
-    font-size: 1.35714286em;
+    font-size: 1.25714286em;
     line-height: 1.36842105em;
   }
 }
@@ -4347,7 +4347,7 @@ ol.lead li:not(:last-child) {
   -moz-transition: 0.2s ease;
 }
 .list--hover li:not(:hover) {
-  opacity: .6;
+  opacity: .8;
 }
 .social-list a {
   color: #252525;
