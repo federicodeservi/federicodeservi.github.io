@@ -4634,7 +4634,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 .presentation {
-  padding-top:16em;
+  padding-top:14em;
 }
 
 @media (min-width: 767px) {
@@ -4654,7 +4654,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 
 .contactform {
-  padding-top:9em; 
+  padding-top:7em; 
   padding-bottom:10em;
 }
 
