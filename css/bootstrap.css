@@ -4679,8 +4679,16 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top:2em; 
 }
 
+.image_project {
+  width:60%;
+}
+
 @media (min-width: 767px) {
   .aboutme2 {
     padding-top:5em; 
   }  
+  .image_project {
+    width:50%;
+  }
   } 
+
