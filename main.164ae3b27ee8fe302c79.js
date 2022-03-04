@@ -30126,7 +30126,7 @@
                     "././assets/img/icon.png",
                     2,
                     "width",
-                    "-webkit-fill-available",
+                    "100%",
                   ],
                   [
                     "type",
